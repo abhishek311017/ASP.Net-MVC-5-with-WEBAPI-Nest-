@@ -1,0 +1,17 @@
+﻿@model  Nest.Models.Customer
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    @if (@Model.DOB.HasValue)
+    {
+        <li>
+            @Model.DOB.Value.ToShortDateString()
+        </li>
+    }
+    <li>@Model.MembershipType.Name</li>
+</ul>
+
